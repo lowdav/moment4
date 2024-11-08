@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- Grafisk teknik för webb, dalo2101, HT2024 -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hem</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="company card">
+            <div class="logo">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="name">
+                <h1>Small figurues inc.</h1>
+            </div>
+        </div>
+        <nav>
+        <div class="nav_container card">
+              <a href="index.html">Home</a>
+              <a href="products.html">Products</a>
+              <a href="about.html">About</a>
+              <a href="cart.html">Cart</a>
+        </div>
+        </nav>
+    </header>
+    <main>
+        <div class="intro card">
+            <h1>Vi säljer små figurer</h1>
+            <p>Gillar du också små figurer? Då har du kommit rätt.</p>
+        </div> 
+        <div class="main_container card">
+
+            <picture>
+                <!-- AVIF för stora skärmar -->
+                <source srcset="img/8.avif" type="image/avif" media="(min-width: 768px)">
+                
+                <!-- WebP för stora skärmar -->
+                <source srcset="img/8.webp" type="image/webp" media="(min-width: 768px)">
+              
+                <!-- AVIF för små skärmar -->
+                <source srcset="img/5.avif" type="image/avif" media="(max-width: 767px)">
+              
+                <!-- WebP för små skärmar -->
+                <source srcset="img/5.webp" type="image/webp" media="(max-width: 767px)">
+              
+                <!-- Fallbackbild i JPEG-format -->
+                <img src="img/5.png" alt="Small figures" class="main_pic">
+              </picture>
+              
+        </div>
+    </main>
+    <footer>
+        <p>Copy Small Figures Inc. 2024</p>
+    </footer>
+</body>
+</html>

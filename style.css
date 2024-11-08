@@ -1,0 +1,307 @@
+/* Moment 4 - projekt, Grafisk teknik för webb. David Löwy, dalo2101 */
+
+@import url('https://fonts.googleapis.com/css2?family=Delius&family=Luckiest+Guy&display=swap');
+
+
+/* CSS reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    /* max-width: 100%; */
+    box-sizing: border-box;
+    font-family: 'Luckiest Guy', sans-serif;;
+}
+
+h1, h2 {
+    font-family: 'Luckiest Guy', sans-serif;
+    color: rgb(144, 12, 168);
+}
+
+p, li {
+    font-family: 'Delius';
+}
+
+p {
+    line-height: 1.4rem;
+}
+
+li {
+    list-style: none;
+}
+
+.price {
+    font-family: 'Luckiest Guy', sans-serif;
+    margin-top: 10px;
+
+}
+
+.name h1 {
+    font-size: clamp(1rem, 3vw + 1rem, 3rem);
+}
+
+/* Stil på text under bilder */
+figcaption {
+    font-size: 1rem;
+    font-style: italic;
+}
+
+/* stil på nav länkar */
+nav a{
+    font-family: 'Luckiest Guy', sans-serif;
+    color: rgb(144, 12, 168);
+    font-size: 1.4rem;    
+}
+
+/* Generella inställningar */
+html{
+    font-size: 62.5%; /* 62.5% av 16 px = Sätter 1rem till 10px */
+    font-size: 1.1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgb(240, 240, 240);
+}
+
+body{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.company {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Döljer logo i mobilläge */
+.logo img {
+    display: none;
+}
+
+
+.name {
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+/* Navigering */
+.nav_container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 5px;
+    padding: 0 !important;
+    text-align: center;
+}
+
+.nav_container a {
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 15px 0;
+    background-color: rgb(144, 12, 168);
+    color: rgb(255, 255, 255);
+}
+
+/* Diverese stil för boxar  */
+.main_container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Responsiva bilder m.m */
+.main_pic {
+    max-width: 100%;
+    height: auto;
+    max-height: 60vh;
+}
+
+.main_products {
+    width: 100%;
+}
+
+.prod_description,
+.intro {
+    text-align: center;
+}
+
+.prod_picture img {
+    max-width: 120px;
+    width: 100%;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+/* Döljer bildtext i mobilläge */
+figcaption {
+    display: none;
+}
+
+/* Design av "kort" */
+.card {
+    background-color: rgb(235, 224, 248);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+video {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.video_container {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: rgb(235, 224, 248);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Köpknappen högerställd */
+.buy {
+    text-align: end;
+    padding: 10px;
+
+}
+
+.buy a {
+    padding: 10px;
+    color: white;
+    background-color: rgb(144, 12, 168);
+    text-decoration: none;
+}
+
+.pay {
+    max-width: 100%;
+    height: auto;
+}
+
+ /* Stil för tabellen på sidan för kundvagn */
+table {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+th {
+    background-color: rgb(144, 12, 168);
+    color: white;
+}
+
+ tr, td, th {
+    text-align: center;
+    padding: 15px;
+    border: 3px solid white;
+ }
+
+ td img {
+    max-height: 50px;
+    width: auto;
+ }
+
+ /* GALLERIET */
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+}
+
+.gallery_pic {
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.gallery_pic img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Snyggar till textfälten i kassan */
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px; 
+    font-size: 1.2rem; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Delius', sans-serif;
+}
+
+button {
+    padding: 10px 35px;
+    background-color: rgb(144, 12, 168);
+    color: white;
+    font-size: 1.1rem;
+    display: block;
+    margin-left: auto;
+}
+
+.tech_specs li{
+    list-style: circle;
+    padding: 4px;
+}
+
+iframe {
+    border: none;
+}
+
+
+/* Stil för större skärmar */
+
+@media (min-width: 768px) {
+    .nav_container a {
+        font-size: 1.4rem;
+    }
+    .nav_container {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 10px;
+    }
+
+    .company {
+        display: flex;
+        max-width: 100%;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .logo img {
+        display: inline-block;
+        width: 100%;
+        max-width: 100px;
+    }
+
+    .main_products {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+    }
+
+    figcaption {
+        display: block;
+        text-align: center;
+    }
+
+    .pay, .details, .order_head {
+        padding-left: 50%;
+        width: 100%;
+    }
+
+    table,
+    input[type="text"],
+    input[type="email"] {
+        width: 100%;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+    }   
+}
